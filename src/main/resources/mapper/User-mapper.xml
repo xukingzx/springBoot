@@ -1,0 +1,11 @@
+<mapper namespace="dream.dao.UserDAO">
+    <resultMap id="BaseResultMap" type="dream.entity.User">
+        <result column="user_id" property="userId" jdbcType="VARCHAR"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="user_age" property="userAge" jdbcType="INT"/>
+        <result column="create_time" property="createTime" jdbcType="BIGINT"/>
+    </resultMap>
+    <select id="getAll" resultMap="BaseResultMap">
+        select * from user;
+    </select>
+</mapper>
